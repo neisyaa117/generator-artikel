@@ -377,7 +377,8 @@ const FORM_URL =
 const ENTRY_ALAMAT = {
   profil:   { provinsi: "1961004809", kabupaten: "1714322525", kecamatan: "986657420",  desa: "995407789"  },
   produk:   { provinsi: "482790474",  kabupaten: "692494276",  kecamatan: "1496770233", desa: "2034046162" },
-  kegiatan: { provinsi: "2134607933", kabupaten: "1247072834", kecamatan: "185737435",  desa: "257820239"  }
+  kegiatan: { provinsi: "2134607933", kabupaten: "1247072834", kecamatan: "185737435",  desa: "257820239"  },
+  tokoh:    { provinsi: "1394362409", kabupaten: "1573707026", kecamatan: "1530440118", desa: "332272090" }
 };
 
 function buatLinkForm(jenisKontenText, provinsiText, kabupatenText, kecamatanText, desaText) {
