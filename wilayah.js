@@ -480,11 +480,7 @@ lanjutBtn.addEventListener(
     // BUKA GOOGLE FORM
     // --------------------------------------------------------
 
-    window.open(
-      link,
-      "_blank"
-    );
-
+   window.location.href = link;
   }
 );
 
