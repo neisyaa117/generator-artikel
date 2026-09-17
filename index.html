@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Artikel Desa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- PANEL KIRI: HERO GELAP -->
+    <section class="hero">
+
+      <div class="hero-top">
+        <div class="brand">
+          <div class="brand-mark">✦</div>
+          <span>Layanan Digital Desa</span>
+        </div>
+
+        <h1 class="hero-title">
+          Cerita desa,<br>ditulis otomatis.
+        </h1>
+
+        <p class="hero-lede">
+          Isi wilayah dan sedikit rincian, sisanya biarkan
+          sistem yang menyusun artikelnya &mdash; profil kepala
+          desa, produk unggulan, atau kegiatan desa.
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="steps-num">1</span>
+          <div>
+            <h3>Pilih jenis konten &amp; wilayah</h3>
+            <p>Tentukan jenis artikel dan lokasi desa di panel sebelah.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps-num">2</span>
+          <div>
+            <h3>Lengkapi rincian di formulir</h3>
+            <p>Formulir terbuka di tab baru dengan wilayah yang sudah terisi.</p>
+          </div>
+        </li>
+        <li>
+          <span class="steps-num">3</span>
+          <div>
+            <h3>Artikel ditulis otomatis</h3>
+            <p>Setelah formulir disubmit, artikelnya muncul di Google Sheets.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- ILUSTRASI SAWAH BERTINGKAT -->
+      <svg class="hero-illustration" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,220 L0,150 Q120,110 240,150 T480,140 T600,160 L600,220 Z" fill="#173B2D"/>
+        <path d="M0,220 L0,175 Q140,140 280,172 T560,168 T600,180 L600,220 Z" fill="#1F4B3A"/>
+        <path d="M0,220 L0,198 Q160,180 320,198 T600,196 L600,220 Z" fill="#2A5C46"/>
+        <circle cx="500" cy="60" r="34" fill="#C89B3C" opacity="0.9"/>
+      </svg>
+    </section>
+
+    <!-- PANEL KANAN: FORM -->
+    <section class="form-side">
+
+      <div class="card" id="panelForm">
+
+        <p class="card-eyebrow">Mulai di sini</p>
+        <h2 class="card-title">Pilih wilayah desa</h2>
+
+        <div class="field">
+          <label for="jenisKonten">Jenis konten</label>
+          <select id="jenisKonten">
+            <option value="">Pilih jenis konten</option>
+            <option value="profil">Profil Kepala Desa</option>
+            <option value="produk">Produk Unggulan Desa</option>
+            <option value="kegiatan">Kegiatan Desa</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="provinsi">Provinsi</label>
+            <select id="provinsi">
+              <option value="">Pilih provinsi</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="kabupaten">Kabupaten / kota</label>
+            <select id="kabupaten" disabled>
+              <option value="">Pilih kabupaten / kota</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="kecamatan">Kecamatan</label>
+            <select id="kecamatan" disabled>
+              <option value="">Pilih kecamatan</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="desa">Desa / kelurahan</label>
+            <select id="desa" disabled>
+              <option value="">Pilih desa / kelurahan</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="lanjutBtn" disabled>Buka Formulir</button>
+
+        <p class="card-footnote">
+          Formulir lengkap akan terbuka di tab baru dengan
+          wilayah yang sudah terisi otomatis.
+        </p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="wilayah.js"></script>
+</body>
+</html>

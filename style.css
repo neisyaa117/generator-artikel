@@ -1,0 +1,337 @@
+/* ============================================================
+   GENERATOR ARTIKEL DESA — style.css
+   Split-screen: hero hijau sawah + panel form kertas
+   ============================================================ */
+
+:root {
+  --ink: #1B2A22;
+  --muted: #5B6B5E;
+  --paper: #F5F6F0;
+  --card: #FFFFFF;
+  --forest: #1F4B3A;
+  --forest-dark: #123024;
+  --forest-deep: #0F241C;
+  --gold: #C89B3C;
+  --gold-light: #E4C878;
+  --line: #DEE3D7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   PANEL KIRI — HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  background: var(--forest-deep);
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(200, 155, 60, 0.10), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(31, 75, 58, 0.55), transparent 55%);
+  color: #F3F1E8;
+
+  padding: 56px 56px 0 56px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 56px;
+
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #C9D3C6;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--forest-deep);
+  font-size: 15px;
+}
+
+.hero-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  max-width: 11ch;
+}
+
+.hero-lede {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #C9D3C6;
+  max-width: 38ch;
+}
+
+.steps {
+  list-style: none;
+  margin-top: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.steps li {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.steps h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #F3F1E8;
+  margin-bottom: 3px;
+}
+
+.steps p {
+  font-size: 13px;
+  color: #A9B6A5;
+  max-width: 34ch;
+}
+
+.steps-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-illustration {
+  display: block;
+  width: 100%;
+  height: 140px;
+  margin-top: 40px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   PANEL KANAN — FORM
+   ============================================================ */
+
+.form-side {
+  background: var(--paper);
+  background-image: radial-gradient(circle, rgba(27, 42, 34, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--line);
+
+  padding: 36px 34px 30px 34px;
+
+  box-shadow:
+    0 1px 2px rgba(27, 42, 34, 0.04),
+    0 18px 40px -22px rgba(27, 42, 34, 0.35);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--forest), var(--gold));
+}
+
+.card-eyebrow {
+  font-size: 12.5px;
+  color: var(--gold-dark, #A97F2C);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 26px;
+}
+
+.field {
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.field-row {
+  display: flex;
+  gap: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background-color: var(--card);
+
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-size: 13.5px;
+  color: var(--ink);
+
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235B6B5E' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+select:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(31, 75, 58, 0.12);
+}
+
+select:disabled {
+  background-color: #F5F6F0;
+  color: #9AA59C;
+  cursor: not-allowed;
+}
+
+button {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 10px;
+  background: var(--forest);
+  color: #fff;
+
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--forest-dark);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background: #D8DCD3;
+  color: #8E978F;
+  cursor: not-allowed;
+}
+
+.card-footnote {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 28px 0 28px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+    max-width: none;
+  }
+
+  .steps {
+    margin-top: 32px;
+  }
+
+  .hero-illustration {
+    height: 90px;
+    margin-top: 24px;
+  }
+
+  .form-side {
+    padding: 40px 20px 56px 20px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
